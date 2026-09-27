@@ -35,6 +35,34 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
 }
+
+/* Page scrollbars — warm "Sunday Supper" track + tomato thumb (Firefox + Chromium) */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--red-deep) var(--mustard-soft);
+}
+*::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+*::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, var(--paper) 0%, var(--cream) 100%);
+  border-inline-start: 1px solid var(--rule);
+}
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--red) 0%, var(--red-deep) 100%);
+  border-radius: 999px;
+  border: 2px solid var(--paper);
+  box-shadow: inset 0 1px 0 rgba(255, 246, 230, .25);
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--mustard) 0%, #D9A028 100%);
+  border-color: var(--red-deep);
+}
+*::-webkit-scrollbar-corner {
+  background: var(--cream);
+}
+
 img { max-width: 100%; height: auto; display: block; }
 a { color: var(--red-deep); text-underline-offset: .18em; text-decoration-thickness: 1.5px; }
 a:hover { color: var(--red); }
@@ -100,7 +128,9 @@ section { position: relative; }
 .site-header { position: sticky; top: 0; z-index: 100; background: rgba(255,246,230,.94); backdrop-filter: saturate(1.2) blur(10px); -webkit-backdrop-filter: saturate(1.2) blur(10px); border-bottom: 1px solid var(--rule); }
 .header-in { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: var(--header-h); }
 .brand { display: inline-flex; align-items: center; gap: .7rem; text-decoration: none; color: var(--ink); min-height: 44px; }
-.brand img { width: 76px; height: 51px; border-radius: 5px; box-shadow: 0 2px 0 rgba(30,26,24,.18); object-fit: cover; }
+.brand img { width: auto; height: 50px; display: block; }
+@media (min-width: 900px) { .brand img { height: 60px; } }
+.brand-text { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .brand-text { font-family: var(--display); font-size: 1.02rem; line-height: 1.05; }
 .brand-text small { display: block; font-family: var(--body); font-weight: 700; font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-soft); margin-top: .2rem; }
 .nav-toggle { display: inline-flex; align-items: center; gap: .5rem; min-height: 46px; min-width: 46px; padding: 0 .9rem; border: 2px solid var(--ink); background: transparent; color: var(--ink); border-radius: 999px; font: 800 .9rem var(--body); cursor: pointer; }
@@ -232,7 +262,7 @@ section { position: relative; }
 .side-chips li { background: var(--cream); border: 2px solid var(--iron); border-radius: 999px; padding: .38rem .9rem; font-weight: 800; font-size: .92rem; }
 
 /* ---------- kitchen strip ---------- */
-.strip { display: grid; grid-auto-flow: column; grid-auto-columns: 72%; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--gut); padding: .5rem var(--gut) 1.5rem; margin: 0 calc(var(--gut) * -1); scrollbar-width: thin; scrollbar-color: var(--red) transparent; }
+.strip { display: grid; grid-auto-flow: column; grid-auto-columns: 72%; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--gut); padding: .5rem var(--gut) 1.5rem; margin: 0 calc(var(--gut) * -1); scrollbar-width: thin; scrollbar-color: var(--red-deep) var(--mustard-soft); }
 @media (min-width: 640px) { .strip { grid-auto-columns: 42%; } }
 @media (min-width: 1040px) { .strip { grid-auto-flow: row; grid-template-columns: repeat(4, 1fr); overflow: visible; margin: 0; padding: 0; } }
 .snap { scroll-snap-align: start; margin: 0; }
