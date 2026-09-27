@@ -7,7 +7,7 @@
 - Address: 7503 Midlothian Tpke, Richmond, VA 23225 (Midlothian Turnpike, Southside Richmond)
 - Wayfinding: Between the Latino Market & Goodyear
 - Phone: (804) 447-5907 (call ahead to place an order)
-- Website: https://gummyshomecooking.com/
+- Website: https://gummys-home-cooking-website.netlify.app/
 - Directions: https://www.google.com/maps/dir/?api=1&destination=Gummy%27s+Home+Cooking%2C+7503+Midlothian+Tpke%2C+Richmond%2C+VA+23225
 
 ## Hours (Eastern Time)
@@ -83,7 +83,7 @@
 - Where is it? 7503 Midlothian Tpke, Richmond, VA 23225, between the Latino Market & Goodyear.
 
 ## Pages
-- Home: https://gummyshomecooking.com/
-- Menu & prices: https://gummyshomecooking.com/menu.html
-- Hours & directions: https://gummyshomecooking.com/visit.html
-- Our story: https://gummyshomecooking.com/about.html
+- Home: https://gummys-home-cooking-website.netlify.app/
+- Menu & prices: https://gummys-home-cooking-website.netlify.app/menu.html
+- Hours & directions: https://gummys-home-cooking-website.netlify.app/visit.html
+- Our story: https://gummys-home-cooking-website.netlify.app/about.html

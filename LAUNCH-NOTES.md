@@ -68,3 +68,8 @@ gummys-logo-sign / gummys-logo-sm (logo, cropped from the counter sign photo).
 
 ## 5. Proposed domain
 **gummyshomecooking.com** (used for canonical, Open Graph, sitemap and `llms.txt` URLs).
+
+
+## Live preview domain (updated 27 Sep 2026)
+The site is live at https://gummys-home-cooking-website.netlify.app/ and every canonical URL, Open Graph/Twitter tag, JSON-LD URL, sitemap.xml, robots.txt and llms.txt now points there, so text-message and social link previews show this address.
+When the owner's own domain (gummyshomecooking.com) is connected in Netlify, find-and-replace `gummys-home-cooking-website.netlify.app` with `gummyshomecooking.com` across the .html/.xml/.txt/.toml files, then redeploy.
