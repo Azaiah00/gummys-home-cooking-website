@@ -487,3 +487,14 @@ dialog.lightbox img { max-height: 86vh; width: auto; margin: 0 auto; border-radi
   .js .deal > * { transform: translateY(40px); }
   .js .deal.in > * { transform: rotate(var(--tilt)); }
 }
+
+/* Fix (29 Sep 2026): on iPhone Safari the recipe-card photos grew without stopping.
+   Safari sized each 4:3 photo box from the portrait photo inside it, the photo then filled the taller box, and so on.
+   The photos are now pinned inside their boxes, so each box's size comes only from its width. */
+.rcard-photo, .rcard-art, .snap-img { position: relative; min-height: 0; flex: none; height: auto; }
+.rcard-photo img, .snap-img img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; }
+@supports not (aspect-ratio: 1) {
+  .rcard-photo, .rcard-art { height: 0; padding-top: 75%; }
+  .snap-img { height: 0; padding-top: 125%; }
+  .rcard-art svg { position: absolute; inset: 0; margin: auto; }
+}
