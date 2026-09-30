@@ -480,7 +480,7 @@ dialog.lightbox img { max-height: 86vh; width: auto; margin: 0 auto; border-radi
 /* Fix (28 Sep 2026): tilted recipe cards were widening the page on phones, making it zoom in and out.
    1) Clip sideways overflow at the page level (overflow: clip keeps the sticky header working).
    2) On phones, cards deal in with a slide only and keep a small tilt, so they never cross the screen edge. */
-@supports (overflow: clip) { html, body { overflow-x: clip; } }
+
 @media (max-width: 639px) {
   .rcard:nth-child(odd) { --tilt: -.35deg; }
   .rcard:nth-child(even) { --tilt: .35deg; }
