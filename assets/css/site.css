@@ -498,3 +498,8 @@ dialog.lightbox img { max-height: 86vh; width: auto; margin: 0 auto; border-radi
   .snap-img { height: 0; padding-top: 125%; }
   .rcard-art svg { position: absolute; inset: 0; margin: auto; }
 }
+
+/* Fix (30 Sep 2026): stable scrolling on phones. The page can only move up and down; sideways panning is off.
+   Only the viewport (html) clips sideways overflow; body is left unclipped so iPhone Safari keeps drawing the whole page. */
+html { overflow-x: hidden; touch-action: pan-y pinch-zoom; }
+body { overflow-x: visible !important; }
